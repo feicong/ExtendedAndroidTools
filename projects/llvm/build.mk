@@ -75,7 +75,7 @@ $(LLVM_HOST_BUILD_DIR):
 		$(LLVM_EXTRA_CMAKE_FLAGS) \
 		$(LLVM_EXTRA_HOST_FLAGS)
 
-LLVM_BRANCH_OR_TAG = llvmorg-14.0.6
+LLVM_BRANCH_OR_TAG = llvmorg-16.0.6
 LLVM_REPO = https://github.com/llvm/llvm-project
 projects/llvm/sources:
 	git clone $(LLVM_REPO) $@ --depth=1 -b $(LLVM_BRANCH_OR_TAG)
