@@ -16,7 +16,7 @@ else
 $(error unknown abi $(NDK_ARCH))
 endif
 
-LLVM_EXTRA_CMAKE_FLAGS = -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra"
+LLVM_EXTRA_CMAKE_FLAGS = -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -DCMAKE_BUILD_TYPE=Release
 LLVM_EXTRA_HOST_FLAGS = -DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=1
 
 ifeq ($(STATIC_LINKING),true)
@@ -57,7 +57,6 @@ $(LLVM_ANDROID_BUILD_DIR): $(HOST_OUT_DIR)/bin/clang-tblgen
 		-DCLANG_BUILD_TOOLS=ON \
 		-DLLVM_ENABLE_LIBXML2=OFF \
 		-DLLVM_TOOL_LLVM_RTDYLD_BUILD=OFF \
-		-DCMAKE_BUILD_TYPE=Release \
 		-DPython3_EXECUTABLE=$(abspath $(HOST_OUT_DIR)/bin/python3.10)
 
 # rules building host llvm-tblgen and clang-tblgen binaries necessary to
