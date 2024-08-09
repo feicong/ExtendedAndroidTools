@@ -57,6 +57,7 @@ $(LLVM_ANDROID_BUILD_DIR): $(HOST_OUT_DIR)/bin/clang-tblgen
 		-DCLANG_BUILD_TOOLS=ON \
 		-DLLVM_ENABLE_LIBXML2=OFF \
 		-DLLVM_TOOL_LLVM_RTDYLD_BUILD=OFF \
+		-DCMAKE_BUILD_TYPE=Release \
 		-DPython3_EXECUTABLE=$(abspath $(HOST_OUT_DIR)/bin/python3.10)
 
 # rules building host llvm-tblgen and clang-tblgen binaries necessary to
