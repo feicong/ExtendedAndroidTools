@@ -6,8 +6,8 @@ $(GNULIB_ANDROID):
 	echo "gnulib build is not supported"
 	false
 
-GNULIB_COMMIT_HASH = 044bf893acee0a55b22b4be0ede0e3ce010c480a
-GNULIB_REPO = https://git.savannah.gnu.org/git/gnulib.git
+GNULIB_COMMIT_HASH = 81868618e1f25b4f30b4aac5640da9c608320e30
+GNULIB_REPO = https://github.com/coreutils/gnulib.git
 projects/gnulib/sources:
 	git clone $(GNULIB_REPO) $@
 	cd $@ && git checkout $(GNULIB_COMMIT_HASH)
