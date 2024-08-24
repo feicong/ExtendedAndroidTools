@@ -40,7 +40,7 @@ jobs:
       - name: Setup NDK
         run: ./scripts/download-ndk.sh
       - name: Build
-        run: make bpftools-min NDK_PATH=`pwd`/android-ndk- NDK_ARCH=${{ matrix.env['ARCH'] }}
+        run: make bpftools-min NDK_PATH=`pwd`/android-ndk-r25b NDK_ARCH=${{ matrix.env['ARCH'] }}
       - uses: actions/upload-artifact@v3
         with:
           name: bpftools-min-android-${{ matrix.env['ARCH'] }}.tar.gz
