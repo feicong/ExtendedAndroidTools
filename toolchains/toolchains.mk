@@ -1,6 +1,6 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 
-NDK_API = 35
+NDK_API = 33
 NDK_PATH = /opt/ndk/android-ndk-r25b
 ANDROID_TOOLCHAIN_PATH = \
     $(abspath $(NDK_PATH)/toolchains/llvm/prebuilt/linux-x86_64/bin)
