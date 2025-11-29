@@ -25,8 +25,10 @@ $(ANDROID_BUILD_DIR)/elfutils: $(ANDROID_OUT_DIR)/lib/pkgconfig/zlib.pc
 
 ELFUTILS_VERSION = 0.194
 ELFUTILS_URL = https://sourceware.org/pub/elfutils/$(ELFUTILS_VERSION)/elfutils-$(ELFUTILS_VERSION).tar.bz2
+ELFUTILS_MIRROR_URL = https://mirrors.kernel.org/sourceware/elfutils/$(ELFUTILS_VERSION)/elfutils-$(ELFUTILS_VERSION).tar.bz2
 projects/elfutils/sources: | $(DOWNLOADS_DIR)
-	curl -L $(ELFUTILS_URL) -o $(DOWNLOADS_DIR)/elfutils-$(ELFUTILS_VERSION).tar.bz2
+	curl -L --retry 3 --retry-delay 2 $(ELFUTILS_URL) -o $(DOWNLOADS_DIR)/elfutils-$(ELFUTILS_VERSION).tar.bz2 || \
+		curl -L --retry 3 --retry-delay 2 $(ELFUTILS_MIRROR_URL) -o $(DOWNLOADS_DIR)/elfutils-$(ELFUTILS_VERSION).tar.bz2
 	-mkdir $@
 	tar xf $(DOWNLOADS_DIR)/elfutils-$(ELFUTILS_VERSION).tar.bz2 -C $@ \
 		--transform="s|^elfutils-$(ELFUTILS_VERSION)||"
