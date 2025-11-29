@@ -43,7 +43,7 @@ $(PYTHON_HOST_BUILD_DIR): $(HOST_CONFIG_SITE)
 		$(HOST_EXTRA_CONFIGURE_FLAGS) \
 		--with-system-ffi
 
-PYTHON_BRANCH_OR_TAG = v3.10.6
+PYTHON_BRANCH_OR_TAG = v3.10.19
 PYTHON_REPO = https://github.com/python/cpython.git
 projects/python/sources:
 	git clone $(PYTHON_REPO) $@ --depth=1 -b $(PYTHON_BRANCH_OR_TAG)
