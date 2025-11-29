@@ -10,7 +10,7 @@ $(CMAKE_HOST_BUILD_DIR):
 	-mkdir $@
 	cd $@ && $(CMAKE_SRCS)/bootstrap --prefix=$(abspath $(HOST_OUT_DIR))
 
-CMAKE_VERSION = 3.30.2
+CMAKE_VERSION = 3.31.10
 CMAKE_URL = https://github.com/Kitware/CMake/releases/download/v$(CMAKE_VERSION)/cmake-$(CMAKE_VERSION).tar.gz
 $(DOWNLOADS_DIR)/cmake-$(CMAKE_VERSION).tar.gz: | $(DOWNLOADS_DIR)
 	cd $(DOWNLOADS_DIR) && curl -L -O $(CMAKE_URL)
