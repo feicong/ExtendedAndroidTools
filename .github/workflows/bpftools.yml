@@ -54,7 +54,6 @@ jobs:
         env:
           - ARCH: arm64
           - ARCH: x86_64
-          - ARCH: armv7
     steps:
       - uses: actions/checkout@v5
       - name: Install dependencies
