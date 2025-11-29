@@ -11,7 +11,7 @@ $(XZ_ANDROID_BUILD_DIR): $(ANDROID_CONFIG_SITE)
 	mkdir -p $@
 	cd $@ && $(XZ_SRCS)/configure $(ANDROID_EXTRA_CONFIGURE_FLAGS)
 
-XZ_BRANCH_OR_TAG = v5.6.2
+XZ_BRANCH_OR_TAG = v5.8.1
 XZ_REPO = https://github.com/tukaani-project/xz
 projects/xz/sources:
 ifeq ($(shell whoami), vagrant)
