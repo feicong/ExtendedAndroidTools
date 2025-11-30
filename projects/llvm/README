@@ -2,7 +2,7 @@ LLVM and Clang sources.
 
 github: https://github.com/llvm/llvm-project
 license: Apache 2.0
-license url: https://releases.llvm.org/14.0.0/LICENSE.TXT
+license url: https://releases.llvm.org/18.1.8/LICENSE.TXT
 
 Building:
 LLVM uses cmake and builds without major surprises. The only twist is that we
