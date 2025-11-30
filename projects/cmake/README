@@ -3,5 +3,4 @@ https://cmake.org/
 
 license: BSD 3-clause
 license url: https://cmake.org/licensing/
-
-Default version: 3.22.2
+github: https://github.com/Kitware/CMake
