@@ -22,7 +22,6 @@ $(SDK_DIR): $(call project-android-target,ffi)
 $(SDK_DIR): $(call project-android-target,flex)
 $(SDK_DIR): $(call project-android-target,libbpf)
 $(SDK_DIR): $(call project-android-target,llvm)
-$(SDK_DIR): $(call project-android-target,obstack)
 $(SDK_DIR): $(call project-android-target,xz)
 
 $(SDK_DIR):
