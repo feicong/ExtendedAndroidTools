@@ -2,6 +2,6 @@
 
 # Definitions of licensing macros
 
-LGPL_URL := https://www.gnu.org/licenses/lgpl-3.0.txt
+LGPL_FILE := projects/lgpl-3.0.txt
 
-fetch-license = curl -L $($(2)_URL) -o $(ANDROID_OUT_DIR)/licenses/$(1)
+fetch-license = cp -f $(LGPL_FILE) $(ANDROID_OUT_DIR)/licenses/$(1)
