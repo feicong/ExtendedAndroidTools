@@ -23,10 +23,7 @@ $(SDK_DIR): $(call project-android-target,flex)
 $(SDK_DIR): $(call project-android-target,libbpf)
 $(SDK_DIR): $(call project-android-target,llvm)
 $(SDK_DIR): $(call project-android-target,obstack)
-$(SDK_DIR): $(call project-android-target,python)
 $(SDK_DIR): $(call project-android-target,xz)
-$(SDK_DIR): $(call project-android-target,zlib)
-$(SDK_DIR): $(call project-android-target,stdc++fs)
 
 $(SDK_DIR):
 	mkdir -p $@
