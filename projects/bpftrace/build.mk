@@ -21,6 +21,10 @@ ifneq ($(LLVM_FRONTEND_DRIVER),)
 BPFTRACE_EXTRA_LDFLAGS += "$(LLVM_FRONTEND_DRIVER)"
 endif
 
+# Fix duplicate symbol crc32 between libelf and NDK's libz
+# Use --allow-multiple-definition to resolve conflicts
+BPFTRACE_EXTRA_LDFLAGS += "-Wl,--allow-multiple-definition"
+
 endif
 
 STRIP_THUNK = $(HOST_OUT_DIR)/bpftrace-strip-thunk

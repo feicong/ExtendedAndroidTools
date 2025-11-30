@@ -21,7 +21,10 @@ $(ANDROID_BUILD_DIR)/elfutils: $(ANDROID_OUT_DIR)/lib/pkgconfig/zlib.pc
 		$(ANDROID_EXTRA_CONFIGURE_FLAGS) \
 		--disable-debuginfod \
 		--disable-libdebuginfod \
-		--enable-install-elfh
+		--enable-install-elfh \
+		--with-zlib \
+		--without-bzlib \
+		--without-lzma
 
 ELFUTILS_VERSION = 0.194
 ELFUTILS_URL = https://sourceware.org/pub/elfutils/$(ELFUTILS_VERSION)/elfutils-$(ELFUTILS_VERSION).tar.bz2
