@@ -4,8 +4,8 @@ Home page: https://www.python.org/
 license: PSFv2
 license url: https://github.com/python/cpython/blob/main/LICENSE
 
-Default version: v3.11.14
-https://github.com/python/cpython/tree/v3.11.14
+Default version: v3.10.19
+https://github.com/python/cpython/tree/v3.10.19
 
 Building:
 - configure scripts needs to be told explicitely what the build environment is
