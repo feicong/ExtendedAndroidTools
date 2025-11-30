@@ -14,6 +14,13 @@ BPFTRACE_EXTRA_CMAKE_FLAGS = -DSTATIC_LINKING=ON
 # dependency, which causes undefined symbol errors when linking statically.
 # This fixes it by adding liblzma to the link line.
 BPFTRACE_EXTRA_LDFLAGS += "$(abspath $(ANDROID_OUT_DIR))/lib/liblzma.a"
+
+# Fix for LLVM 16+: Add LLVMFrontendDriver library if it exists
+LLVM_FRONTEND_DRIVER = $(wildcard $(ANDROID_OUT_DIR)/lib/libLLVMFrontendDriver.a)
+ifneq ($(LLVM_FRONTEND_DRIVER),)
+BPFTRACE_EXTRA_LDFLAGS += "$(LLVM_FRONTEND_DRIVER)"
+endif
+
 endif
 
 STRIP_THUNK = $(HOST_OUT_DIR)/bpftrace-strip-thunk
