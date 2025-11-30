@@ -21,7 +21,7 @@ $(FFI_HOST_BUILD_DIR): $(HOST_CONFIG_SITE)
 	mkdir -p $@
 	cd $@ && $(FFI_SRCS)/configure $(HOST_EXTRA_CONFIGURE_FLAGS)
 
-FFI_BRANCH_OR_TAG = v3.4.6
+FFI_BRANCH_OR_TAG = v3.5.2
 FFI_REPO = https://github.com/libffi/libffi
 projects/ffi/sources:
 	git clone $(FFI_REPO) $@ --depth=1 -b $(FFI_BRANCH_OR_TAG)
